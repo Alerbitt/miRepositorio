@@ -3,10 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primera Página</title>
     <link rel="stylesheet" href="style.css">
-    <title>Mi primera Pagina</title>
 </head>
 <body>
+    <!-- Menú de navegación -->
+    <nav>
+        <a href="">
+            <img src="img/btn-house.png" alt="Inicio" title="Inicio" width="100px">
+        </a>
+        <a href="paginas/contactos.html">
+            <img src="img/btn-contacto.png" alt="Contactos" title="Ir a Contactos" width="100px">
+        </a>
+        <a href="paginas/servicios.html">
+            <img src="img/btn-servicios.png" alt="Servicios" title="Ir a Servicios" width="100px">
+        </a>
+    </nav>
     
+    <!-- Contenido Principal -->
+    <main>
+        <section>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        </section>
+
+        <!-- Ejemplo de texto con formato -->
+        <section>
+            <p><b>Texto en negrita</b></p>
+            <p><i>Texto en cursiva</i></p>
+            <p><em>Cursiva con semántica</em></p>
+            <p><small>Texto pequeño</small></p>
+            <p>F<sub>(x)</sub> = 2X<sup>3</sup> - 4x</p>
+            <p><mark>Texto resaltado</mark></p>
+            <p><ins>Texto subrayado</ins></p>
+            <p><del>Texto tachado</del></p>
+        </section>
+
+        <!-- Encabezados -->
+        <section>
+            <h1>Encabezado H1</h1>
+            <h2>Encabezado H2</h2>
+            <h3>Encabezado H3</h3>
+            <h4>Encabezado H4</h4>
+            <h5>Encabezado H5</h5>
+            <h6>Encabezado H6</h6>
+        </section>
+
+        <!-- Enlaces -->
+        <section>
+            <h2>Enlaces</h2>
+            <a href="https://www.unicesar.edu.co/">Página de la universidad</a>
+            <a href="https://www.unicesar.edu.co/" target="_blank">Abrir en nueva pestaña</a>
+            <a href="img/Marvel.jpeg" target="_blank">Ver imagen</a>
+            <a href="archivos/PrimerParcial.txt" target="_blank">Descargar PDF</a>
+        </section>
+
+        <!-- Listas -->
+        <section>
+            <h2>Instrucciones</h2>
+            <ol>
+                <li>Clonar el repositorio</li>
+                <li>Verificar el estado</li>
+            </ol>
+            <ul>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+            </ul>
+        </section>
+
+        <!-- Tabla de Datos -->
+        <section>
+            <h2>Datos de Usuarios</h2>
+            <table border="2">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <td>112233</td>
+                    <td>Pancha</td>
+                    <td>Mora</td>
+                    <td>parchamora@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>221133</td>
+                    <td>Moni</td>
+                    <td>Cagalindo</td>
+                    <td>monicagalindo@unipc.mx</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Formulario -->
+        <section>
+            <h2>Formulario de Registro</h2>
+            <form>
+                <input type="number" placeholder="Ingrese su ID" required>
+                <input type="text" placeholder="Ingrese su nombre" required>
+                <input type="text" placeholder="Ingrese sus apellidos" required>
+                <input type="email" placeholder="Ingrese su email" required>
+                
+                <label>Seleccione su ciudad:</label>
+                <select>
+                    <option>Aguachica</option>
+                    <option>Bucaramanga</option>
+                    <option>Valledupar</option>
+                </select>
+                
+                <label>Seleccione su género:</label>
+                <input type="radio" name="genero" value="Femenino"> Femenino
+                <input type="radio" name="genero" value="Masculino"> Masculino
+                <input type="radio" name="genero" value="Otro"> Otro
+                
+                <label>Seleccione sus hobbies:</label>
+                <input type="checkbox" value="leer"> Leer
+                <input type="checkbox" value="deporte"> Deporte
+                <input type="checkbox" value="musica"> Música
+                
+                <label>Mensaje:</label>
+                <textarea></textarea>
+                
+                <label>Ingrese sus credenciales:</label>
+                <input type="text" placeholder="Usuario">
+                <input type="password" placeholder="Contraseña">
+                
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+
+        <!-- Multimedia -->
+        <section>
+            <h2>Multimedia</h2>
+            <audio src="audios/audio1.mp3" controls></audio>
+            <video src="videos/video1.mp4" controls></video>
+        </section>
+    </main>
 </body>
 </html>
