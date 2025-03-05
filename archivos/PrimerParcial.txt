@@ -1,0 +1,111 @@
+class Nodo{
+    constructor(value){
+        this.value = value;
+        this.nex = null;
+    }
+}
+
+class LinkedList{
+
+    constructor(){
+        this.head = null;
+        this.size = 0;
+    }
+
+    Append(value){
+        const newNodo = new Nodo(value);
+
+        if(!this.head){
+            this.head = newNodo;
+            this.size++;
+            return;
+        }
+
+        let current = this.head;
+        while(current.nex){
+            current = current.nex;
+        }
+
+        current.nex = newNodo;
+        this.size++;
+    }
+
+    // De la clase anterior
+    prepend(value){
+        const newNodo = new Nodo(value);
+
+        if(!this.head){
+            this.head = newNodo;
+            return;
+        }
+
+        newNodo.tail = this.head;
+        this.head = newNodo;
+
+    }
+
+    insert(index, value){
+        const newNodo = new Nodo(value);
+
+        if(index === 0){
+            newNodo.nex = this.head;
+            this.head = newNodo;
+            this.size++;
+            return;
+        }
+
+        let current = this.head;
+        let count = 0;
+
+        while(current){
+            if(index - 1 === count){
+                //El apuntador del nuevo nodo apunta al apuntador del nodo anterior siguiendo la cadena
+                newNodo.nex = current.nex;
+                //El apuntador del nodo anterior apunta al nuevo nodo que ya apunta a donde apuntaba el nodo anterior
+                current.nex = newNodo;
+                this.size++;
+                return;
+            }
+            current = current.nex;
+            count++;
+        }
+    }
+
+    pop(){
+        if(!this.head) return;
+
+        if(this.size === 1){
+            this.head = null;
+            this.size--;
+            return;
+        }
+
+        let current = this.head;
+        let anterior = null;
+
+        while(current.nex){
+            anterior = current;
+            current = current.nex;
+        }
+        anterior.nex = null;
+        this.size--;
+    }
+
+    mostrar(){
+        let current = this.head;
+        while(current){
+            alert(current.value);
+            current = current.nex;
+        }
+    }
+}
+
+let lista = new LinkedList();
+
+lista.Append(20);
+lista.Append(25);
+lista.Append(13);
+lista.Append(44);
+lista.insert(1 , 2);
+lista.mostrar();
+console.log(lista);
