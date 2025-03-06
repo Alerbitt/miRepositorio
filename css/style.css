@@ -1,0 +1,21 @@
+body{
+    background-color: yellowgreen;
+}
+
+p.nombre{
+    color: rgb(0, 255, 55);
+    background-color: beige;
+}
+
+p{
+    color: tomato;
+    background-color: lightblue;
+}
+
+.DIV1{
+    color: blue;
+    background-color: lightcoral;
+    padding: 20px;
+    margin: 20px;
+    width: 50%;
+}
